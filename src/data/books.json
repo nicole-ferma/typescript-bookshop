@@ -1,0 +1,27 @@
+
+[
+  {
+    "id": 1,
+    "name": "The Return of the King",
+    "price": 44,
+    "imgUrl": "/imgs/the-return-of-the-king.jpg"
+  },
+  {
+    "id": 2,
+    "name": "The Little Prince",
+    "price": 18.42,
+    "imgUrl": "/imgs/the-little-prince.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Geis",
+    "price": 30.32,
+    "imgUrl": "/imgs/geis-alexis-deacon.jpg"
+  },
+  {
+    "id": 4,
+    "name": "The Book Thief",
+    "price": 29.40,
+    "imgUrl": "/imgs/the-book-thief.jpg"
+  }
+]
