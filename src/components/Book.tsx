@@ -1,5 +1,6 @@
 import { Button, Card } from "react-bootstrap"
 import { formatCurrency } from "../utilities/formatCurrency"
+import { useCart } from '../context/CartContext'
 
 type BookProps = {
   id: number,
@@ -9,7 +10,9 @@ type BookProps = {
 }
 
 export function Book({ id, name, price, imgUrl}: BookProps) {
-  const quantity = 1
+  const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useCart()
+  const quantity = getItemQuantity(id)
+  
   return (
     <>
       <Card className="h-100">
