@@ -24,9 +24,31 @@ export function useCart() {
 
 export function CartProvider( { children }: CartProviderProps ) {
   const [cartItems, setCartItems] = useState<CartItem[]>([])
+
+  function getItemQuantity(id: number) {
+    // if item exists, return its quantity value
+    return cartItems.find(item => item.id === id)?.quantity || 0
+  }
+
+  function increaseCartQuantity(id: number) {
+    setCartItems(currItems => {
+      if (currItems.find(item => item.id === id) == null) {
+        return [...currItems, { id, quantity: 1}]
+      } else {
+        return currItems.map(item => {
+          if (item.id === id) {
+            return {...item, quantity: item.quantity + 1}
+          } else {
+            return item
+          }
+        })
+      }
+    })
+  }
+
   return (
-    <CartContext.Provider value={{}}>
+    <CartContext.Provider value={{ getItemQuantity, increaseCartQuantity }}>
       {children}
     </CartContext.Provider>
   )
-}
+} 
