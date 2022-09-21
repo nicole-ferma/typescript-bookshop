@@ -23,7 +23,7 @@ export function Navbar() {
           <Button 
             onClick={openCart}
             style={{ width: "3rem", height: "3rem", position: "relative" }}
-            variant="outline-primary"
+            variant="outline-warning"
             className="rounded-circle"
           >
             <svg
