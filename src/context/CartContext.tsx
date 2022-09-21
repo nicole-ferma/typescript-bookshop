@@ -40,7 +40,6 @@ export function CartProvider( { children }: CartProviderProps ) {
   const closeCart = () => setIsOpen(false)
 
   function getItemQuantity(id: number) {
-    // if item exists, return its quantity value
     return cartItems.find(item => item.id === id)?.quantity || 0
   }
 

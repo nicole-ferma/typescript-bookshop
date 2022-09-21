@@ -1,6 +1,6 @@
 import { Button, Card } from "react-bootstrap"
 import { formatCurrency } from "../utilities/formatCurrency"
-import { useCart } from '../context/CartContext'
+import { useCart } from "../context/CartContext"
 
 type BookProps = {
   id: number,
